@@ -42,26 +42,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px 100px;
-    background-color: #512D6D;  /* NatWest Purple */
+    background-color: #512D6D;
     color: white;
-}
-
-.main-content {
-    max-width: 50%;
 }
 
 .main-content h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-}
-
-.main-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.button-group {
-    margin-top: 20px;
 }
 
 .button {
@@ -70,15 +57,14 @@ body {
     border: 2px solid white;
     border-radius: 25px;
     padding: 10px 25px;
-    font-size: 1rem;
     cursor: pointer;
     margin-right: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button:hover {
-    background-color: #FFBF00;  /* NatWest Gold */
-    color: #512D6D;  /* NatWest Purple */
+    background-color: #FFBF00;
+    color: #512D6D;
 }
 
 .main-image img {
@@ -86,12 +72,11 @@ body {
     border-radius: 10px;
 }
 
-/* Key Stories Section */
+/* Stories Section */
 .stories-section {
     padding: 50px 100px;
     background-color: #FFFFFF;
-    color: #512D6D;  /* NatWest Purple */
-    text-align: left;
+    color: #512D6D;
 }
 
 .stories-section h2 {
@@ -110,32 +95,79 @@ body {
 }
 
 .stories-section ul li a {
-    color: #512D6D;  /* NatWest Purple */
+    color: #512D6D;
     text-decoration: none;
-    border-bottom: 2px solid #FFBF00;  /* NatWest Gold */
+    border-bottom: 2px solid #FFBF00;
     padding-bottom: 2px;
     transition: color 0.3s ease;
 }
 
 .stories-section ul li a:hover {
-    color: #FFBF00;  /* NatWest Gold */
+    color: #FFBF00;
 }
 
-.team-image img {
-    width: 100%;
+/* Team Members Section */
+.team-section {
+    padding: 50px 100px;
+    background-color: #F5F5F5;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #512D6D;
+}
+
+/* Responsive Grid for Team Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* Styling Individual Team Member Cards */
+.member-card {
+    background-color: white;
     border-radius: 10px;
-    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    color: #512D6D;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Team Member Image Styling */
+.member-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover; /* Ensures image fits nicely inside the circle */
+}
+
+/* Team Member Name and Role */
+.member-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.member-card p {
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 /* Footer */
 .footer {
-    background-color: #512D6D;  /* NatWest Purple */
-    color: white;
+    background-color: #512D6D;
+    padding: 20px;
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    color: white;
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -159,16 +191,8 @@ body {
         padding: 20px;
     }
 
-    .main-content {
-        max-width: 100%;
-    }
-
     .main-content h1 {
         font-size: 2rem;
-    }
-
-    .main-content p {
-        font-size: 1rem;
     }
 
     .button {
@@ -189,8 +213,8 @@ body {
         font-size: 1.5rem;
     }
 
-    .stories-section ul li {
-        font-size: 1rem;
+    .team-container {
+        grid-template-columns: 1fr;
     }
 
     .footer {
