@@ -108,48 +108,59 @@ body {
 
 /* Team Members Section */
 .team-section {
-    padding: 50px 100px;
-    background-color: #F5F5F5;
+    padding: 50px 20px; /* Adjust padding as needed */
+    background-color: #F0F0F0; /* Light background */
     text-align: center;
 }
 
 .team-section h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
-    color: #512D6D;
+    color: #512D6D; /* NatWest Purple */
 }
 
-/* Responsive Grid for Team Cards */
+/* Flexbox Layout for Team Members */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    justify-content: flex-start; /* Align items to the start */
+    gap: 20px; /* Space between team member cards */
+    padding: 20px 0; /* Padding for top and bottom */
 }
 
 /* Styling Individual Team Member Cards */
 .member-card {
-    background-color: white;
+    background-color: #FFFFFF; /* White background for cards */
     border-radius: 10px;
     padding: 20px;
+    width: 200px; /* Fixed width for cards */
     text-align: center;
-    color: #512D6D;
+    color: #512D6D; /* NatWest Purple */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
 }
 
 .member-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 /* Team Member Image Styling */
-.member-card img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover; /* Ensures image fits nicely inside the circle */
+.member-card {
+    /* Add padding and margin to ensure the images display correctly */
+    padding: 20px; /* Adjust as needed */
 }
+
+.member-card img {
+    width: 250px;         /* Fixed image width */
+    height: 250px;        /* Fixed image height */
+    border-radius: 50%;   /* Circular shape */
+    margin-bottom: 15px;
+    object-fit: cover;    /* Ensures image fits nicely inside the circle */
+    overflow: hidden;     /* Ensures no overflow outside the circle */
+}
+
 
 /* Team Member Name and Role */
 .member-card h3 {
@@ -160,6 +171,35 @@ body {
 .member-card p {
     font-size: 1rem;
     margin-bottom: 10px;
+}
+
+/* Contact Button */
+.member-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #512D6D; /* NatWest Purple */
+    color: white; /* Text color */
+    border-radius: 25px; /* Rounded button */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.3s ease;
+}
+
+.member-card a:hover {
+    background-color: #FFBF00; /* Gold color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .member-card {
+        width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Margin for vertical spacing */
+    }
 }
 
 /* Footer */
