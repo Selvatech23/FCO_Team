@@ -6,21 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team Page - NatWest Group Style</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+                /* Links Section */
+                .links-section {
+            display: none; /* Hidden by default */
+            background-color: white; /* Background for the links section */
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd; /* Border for better visibility */
+            border-radius: 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <img src="https://www.natwestgroup.com/content/dam/championlogos/Logo_Wh_NatWestGroupColleague-Hor.svg" alt="NatWest Group Logo">
-        </div>
-        <nav class="navbar">
-            <a href="#">Who we are</a>
-            <a href="#team-members">Team Members</a>
-            <a href="#">Investors</a>
-            <a href="#">News & Insights</a>
-            <a href="#">Careers</a>
-        </nav>
-    </header>
+<!-- Header Section -->
+<header class="header">
+    <div class="logo">
+        <img src="https://www.natwestgroup.com/content/dam/championlogos/Logo_Wh_NatWestGroupColleague-Hor.svg" alt="NatWest Group Logo">
+    </div>
+    <nav class="navbar">
+        <a href="#who-we-are">Who we are</a>
+        <a href="#team-members">Team Members</a>
+        <a href="#" id="toggle-links">Links</a> <!-- Link to toggle the section -->
+        <a href="#news-insights">News & Insights</a>
+        <a href="#careers">Careers</a>
+    </nav>
+</header>
+<!-- Links Section -->
+<div class="links-section" id="links-section">
+    <h3>Useful Links</h3>
+    <div class="card">
+        <a href="https://natwest.workwareplus.com/" target="_blank">NatWest Workware</a>
+    </div>
+    <div class="card">
+        <a href="https://www.natwestgroup.com/" target="_blank">NatWest Group</a>
+    </div>
+    <div class="card">
+        <a href="https://chatgpt.com/" target="_blank">ChatGPT</a>
+    </div>
+    <div class="card">
+        <a href="https://rbsconnect.rbspeople.com/logon/LogonPoint/tmindex.html" target="_blank">RBS Connect</a>
+    </div>
+    <button class="button" onclick="document.getElementById('links-section').style.display='none'">Close</button>
+</div>
+
+<script>
+    // JavaScript to toggle the visibility of the links section
+    document.getElementById('toggle-links').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        const linksSection = document.getElementById('links-section');
+        // Toggle visibility
+        if (linksSection.style.display === 'none' || linksSection.style.display === '') {
+            linksSection.style.display = 'block'; // Show the section
+        } else {
+            linksSection.style.display = 'none'; // Hide the section
+        }
+    });
+</script>
+
+
 
     <!-- Main Section -->
     <main class="main-section">
@@ -61,19 +106,22 @@
                 <h2>Rega</h2>
                 <p class="title">Team Leader</p>
                 <p>A natural leader who guides the team with confidence and ensures seamless support for both the team and customers. Known for fostering collaboration and driving success through teamwork</p>
-                <p>ramacr@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:ramacr@rbos.co.uk">ramacr@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
 
         <!-- Selva -->
         <div class="member-card">
-            <img src="selva.jpg" alt="Selva" style="width:100%">
+            <img src="selva1.jpg" alt="Selva" style="width:100%">
             <div class="container">
                 <h2>Selva</h2>
                 <p class="title">INC - Debit</p>
                 <p>A passionate tech enthusiast and data analyst with a knack for problem-solving. As an SME for his process, he consistently provides valuable insights and is known as a true team player who offers unwavering support to colleagues.</p>
-                <p>rsbdb@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:rsbdb@rbos.co.uk">rsbdb@rbos.co.uk</a>
+
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -85,7 +133,8 @@
                 <h2>Srinivas</h2>
                 <p class="title">INC - Debit</p>
                 <p>A quick learner and tech enthusiast, Srinivas combines smart thinking with strong data analysis skills. Highly supportive, he adds tremendous value to the team with his proactive approach.</p>
-                <p>raosx@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:raosx@rbos.co.uk">raosx@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -97,7 +146,8 @@
                 <h2>Joseph</h2>
                 <p class="title">INC - Debit</p>
                 <p>Dedicated and reliable in his job, Joseph excels in his role. Outside of work, he embraces the role of a director in his personal life, managing it with equal care and passion.</p>
-                <p>ajbbj@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:ajbbj@rbos.co.uk">ajbbj@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -109,7 +159,8 @@
                 <h2>Subhishya</h2>
                 <p class="title">INC - Debit</p>
                 <p>With a positive outlook on work culture, Subhishya is appreciated for having the right mindset to adapt, contribute, and excel in the team environment.</p>
-                <p>kvsbc@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:kvsbc@rbos.co.uk">kvsbc@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -121,7 +172,8 @@
                 <h2>Pallavi</h2>
                 <p class="title">INC - Debit</p>
                 <p>Known for getting the job done effectively, Pallavi is respected not just for her professionalism but also for her genuine and kind nature.</p>
-                <p>ypbbb@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:ypbbb@rbos.co.uk">ypbbb@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -134,7 +186,8 @@
                 <h2>Elakkiya</h2>
                 <p class="title">FDP - Credit</p>
                 <p>A strong and determined individual, Elakkiya exemplifies resilience and dedication in her work, making her a key asset to the team.</p>
-                <p>thulase@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:thulase@rbos.co.uk">thulase@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -146,7 +199,8 @@
                 <h2>Saumya</h2>
                 <p class="title">FDP - Credit</p>
                 <p>A proud Kerala girl who brings warmth to the team. Saumya is so approachable that some team members even learned Malayalam from her. She’s always ready to offer support and encouragement.</p>
-                <p>jacobsv@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:jacobsv@rbos.co.uk">jacobsv@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -158,7 +212,8 @@
                 <h2>Rebeka</h2>
                 <p class="title">FDP - Credit</p>
                 <p>Rebeka is deeply passionate about both her personal life and her work. She approaches every task with dedication and delivers exceptional results, earning the respect of her peers.</p>
-                <p>rathnr@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:rathnr@rbos.co.uk">rathnr@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -170,7 +225,8 @@
                 <h2>Om Prakash</h2>
                 <p class="title">Abusive Team</p>
                 <p>Om Prakash skillfully handles multiple processes while also mentoring his friends. Known for his thoughtful advice and good work, he plays a dual role as a mentor and key team member.</p>
-                <p>bobbb@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:bobbb@rbos.co.uk">bobbb@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -184,7 +240,8 @@
                 <p>Pavitha excels in balancing work and family life, proving that it’s possible to succeed in both. Her commitment to her responsibilities inspires those around her.
 
                 </p>
-                <p>arulp@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:arulp@rbos.co.uk">arulp@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -196,7 +253,8 @@
                 <h2>Nithyashri</h2>
                 <p class="title">INC - Credit</p>
                 <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
-                <p>tnbbh@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -208,12 +266,15 @@
                 <h2>Preethi</h2>
                 <p class="title">PSD</p>
                 <p>A talented dancer and a smart worker, Preethi consistently delivers high productivity and quality results without any errors. Her vibrant personality shines both at work and beyond.</p>
-                <p>preepei@rbos.co.uk</p>
+                <div class="spacer"></div> <!-- Spacer pushes content above email link -->
+                <a href="mailto:preepei@rbos.co.uk">preepei@rbos.co.uk</a>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
     </div>
 </section>
+<!-- Toggle Button -->
+<div class="toggle-button" onclick="toggleLinks()">Links</div>
 
 
 
@@ -221,5 +282,8 @@
     <footer class="footer">
         <p>&copy; 2024 NatWest Group Team. All rights reserved.</p>
     </footer>
+
+
+ 
 </body>
 </html>
