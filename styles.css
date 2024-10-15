@@ -106,88 +106,118 @@ body {
     color: #FFBF00;
 }
 
+/*         88888888888888888888888888888888888888888888888888888888888888888888888 */
 /* Team Members Section */
 .team-section {
-    padding: 50px 20px; /* Adjust padding as needed */
-    background-color: #F0F0F0; /* Light background */
+    padding: 10px 20px;
+    background-color: #F0F0F0;
     text-align: center;
 }
 
 .team-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #512D6D; /* NatWest Purple */
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #512D6D;
 }
 
-/* Flexbox Layout for Team Members */
-.team-grid {
-    display: flex; /* Use flexbox for horizontal layout */
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    justify-content: flex-start; /* Align items to the start */
-    gap: 20px; /* Space between team member cards */
-    padding: 20px 0; /* Padding for top and bottom */
-}
-
-/* Styling Individual Team Member Cards */
-.member-card {
-    background-color: #FFFFFF; /* White background for cards */
-    border-radius: 10px;
-    padding: 20px;
-    width: 200px; /* Fixed width for cards */
+/* Team Section Styling */
+.team-section {
     text-align: center;
-    color: #512D6D; /* NatWest Purple */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effects */
+    padding: 50px;
 }
 
-.member-card:hover {
-    transform: scale(1.05); /* Slightly increase size on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-/* Team Member Image Styling */
-.member-card {
-    /* Add padding and margin to ensure the images display correctly */
-    padding: 20px; /* Adjust as needed */
+/* Flip Card Container */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    margin: auto;
 }
 
-.member-card img {
-    width: 250px;         /* Fixed image width */
-    height: 250px;        /* Fixed image height */
-    border-radius: 50%;   /* Circular shape */
-    margin-bottom: 15px;
-    object-fit: cover;    /* Ensures image fits nicely inside the circle */
-    overflow: hidden;     /* Ensures no overflow outside the circle */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
-
-/* Team Member Name and Role */
-.member-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.member-card p {
-    font-size: 1rem;
-    margin-bottom: 10px;
+/* Front and Back Faces */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Contact Button */
-.member-card a {
-    display: inline-block;
+.flip-card-front {
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+}
+
+.flip-card-back {
+    background-color: #4CAF50;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back a {
+    color: #fff;
+    text-decoration: underline;
     margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #512D6D; /* NatWest Purple */
-    color: white; /* Text color */
-    border-radius: 25px; /* Rounded button */
-    text-decoration: none; /* No underline */
-    transition: background-color 0.3s ease;
 }
 
-.member-card a:hover {
-    background-color: #FFBF00; /* Gold color on hover */
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
 }
+
+
+
+
+
+
+/*888888888888888888888888888888888888888888888 8/
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -313,6 +343,11 @@ body {
 
 .grid-item:hover {
     transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Add margin-bottom to the team-members section */
+#team-members {
+    margin-bottom: 1000px; /* Adjust as needed */
 }
 
 
