@@ -183,7 +183,7 @@ body {
 }
 
 .flip-card-back {
-    background-color: #4CAF50;
+    background-color: #907ccf;
     color: white;
     transform: rotateY(180deg);
     padding: 20px;
@@ -212,9 +212,26 @@ body {
     cursor: pointer;
 }
 
+/* Reset styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
 
+  
+  /* Grid Layout for Cards */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 20px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto; /* Center align the grid */
+    padding: 0 20px;
+  }
 
-/*888888888888888888888888888888888888888888888 8/
+/*888888888888888888888888888888888888888888888 8888888888888888888888888888888888888888888888888888888888888888888888/
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
@@ -232,10 +249,16 @@ body {
 /* Footer */
 .footer {
     background-color: #512D6D;
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     color: white;
+    margin-top: 0; /* No space above the footer */
 }
+
+
+
+
+
 
 
 /* Links Section */
@@ -347,36 +370,12 @@ body {
     margin-bottom: 1000px; /* Adjust as needed */
 }
 
-
-/* Reset styles for consistency */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
   /* Section Styling */
   #team-members {
     margin: 0; /* Remove unnecessary margin */
     padding-bottom: 0; /* Ensure no extra space at the bottom */
   }
+
   
-  /* Grid Layout for Cards */
-  .team-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-    gap: 20px; /* Space between cards */
-    max-width: 1200px;
-    margin: 0 auto; /* Center align the grid */
-    padding: 0 20px;
-  }
-  
-  /* Footer Styling */
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 0; /* No space above the footer */
-  }
+ 
   

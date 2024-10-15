@@ -27,7 +27,7 @@
     </div>
     <nav class="navbar">
         <a href="#who-we-are">Who we are</a>
-        <a href="#team-members">Team Members</a>
+        <a href="#" id="toggle-team">Team Members</a> 
         <a href="#" id="toggle-links">Links</a> <!-- Link to toggle the section -->
         <a href="#news-insights">News & Insights</a>
         <a href="#careers">Careers</a>
@@ -165,7 +165,7 @@
     </section>
 
     <!-- Team Members Section -->
-<section id="team-members" class="team-section">
+<div id="team-members" class="team-section" style="display: none;"> <!-- Initially hidden -->
     <h2>Meet Our Team</h2>
     <div class="team-grid">
         <!-- Rega -->
@@ -178,7 +178,7 @@
                 <div class="flip-card-back">
                     <h2>Rega</h2>
                     <p class="title">Team Leader</p>
-                    <p>A natural leader guiding the team with confidence, fostering collaboration for success.</p>
+                    <p>A natural leader who guides the team with confidence and ensures seamless support for both the team and customers. Known for fostering collaboration and driving success through teamwork</p>
                     <a href="mailto:ramacr@rbos.co.uk">ramacr@rbos.co.uk</a>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -195,7 +195,7 @@
                 <div class="flip-card-back">
                     <h2>Selva</h2>
                     <p class="title">INC - Debit</p>
-                    <p>A tech enthusiast providing insights and strong support to the team.</p>
+                    <p>A passionate tech enthusiast and data analyst with a knack for problem-solving. As an SME for his process, he consistently provides valuable insights and is known as a true team player who offers unwavering support to colleagues.</p>
                     <a href="mailto:rsbdb@rbos.co.uk">rsbdb@rbos.co.uk</a>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -371,7 +371,21 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            document.getElementById('toggle-team').addEventListener('click', function(e) {
+              e.preventDefault(); // Prevent default anchor behavior
+              const teamSection = document.getElementById('team-members');
+              
+              // Toggle visibility
+              if (teamSection.style.display === 'none' || teamSection.style.display === '') {
+                teamSection.style.display = 'block'; // Show the section
+              } else {
+                teamSection.style.display = 'none'; // Hide the section
+              }
+            });
+          </script>
+          
+        
 
     </div>
 </section>
