@@ -1,0 +1,45 @@
+<!-- games/rock-paper-scissors.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the local stylesheet in the games folder -->
+
+</head>
+<body>
+    <h1>Rock, Paper, Scissors Game</h1>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <div id="result"></div>
+    
+    <script>
+        // JavaScript for the game logic
+        document.getElementById('rock').onclick = playGame.bind(null, 'rock');
+        document.getElementById('paper').onclick = playGame.bind(null, 'paper');
+        document.getElementById('scissors').onclick = playGame.bind(null, 'scissors');
+
+        function playGame(playerChoice) {
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+            const resultDisplay = document.getElementById('result');
+
+            let result;
+            if (playerChoice === computerChoice) {
+                result = 'It\'s a tie!';
+            } else if (
+                (playerChoice === 'rock' && computerChoice === 'scissors') ||
+                (playerChoice === 'paper' && computerChoice === 'rock') ||
+                (playerChoice === 'scissors' && computerChoice === 'paper')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'You lose!';
+            }
+            resultDisplay.innerHTML = `You chose ${playerChoice}. Computer chose ${computerChoice}. ${result}`;
+        }
+    </script>
+</body>
+</html>
