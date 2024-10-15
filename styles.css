@@ -281,15 +281,38 @@ body {
 }
 
 /*useful links  */
-.card {
-    background: #fff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin: 15px 0; /* Margin to separate cards */
-    padding: 15px; /* Padding for inner content */
-    transition: transform 0.2s; /* Transition for hover effect */
+.links-section {
+    padding: 20px;
+    text-align: center;
 }
 
-.card:hover {
-    transform: translateY(-2px); /* Lift effect on hover */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between grid items */
 }
+
+.grid-item {
+    background: #f9f9f9; /* Light background for items */
+    border: 1px solid #ddd; /* Border around items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s; /* Animation effect on hover */
+}
+
+.grid-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 4px; /* Rounded corners for images */
+}
+
+.grid-item p {
+    margin: 10px 0 0; /* Margin for text */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+
