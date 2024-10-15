@@ -246,14 +246,6 @@ body {
     }
 }
 
-/* Footer */
-.footer {
-    background-color: #512D6D;
-    padding: 20px;
-    text-align: center;
-    color: white;
-    margin-top: 0; /* No space above the footer */
-}
 
 
 
@@ -376,6 +368,23 @@ body {
     padding-bottom: 0; /* Ensure no extra space at the bottom */
   }
 
-  
- 
-  
+/* Footer */
+.footer {
+    background-color: #512D6D;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 0; /* No space above the footer */
+}
+
+.footer {
+    display: block !important;
+    visibility: visible !important;
+}
+
+
+
+
+
+
+

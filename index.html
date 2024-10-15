@@ -4,20 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Page - NatWest Group Style</title>
+    <title>Team Page - NatWest Group</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Links Section */
-        .links-section {
-    display: none; /* Hidden by default */
-    background-color: white; /* Background for the links section */
-    padding: 20px;
-    margin: 20px 0;
-    border: 1px solid #ddd; /* Border for better visibility */
-    border-radius: 5px;
-}
-
-</style>
 </head>
 <body>
 <!-- Header Section -->
@@ -31,10 +19,12 @@
         <a href="#" id="toggle-links">Links</a> <!-- Link to toggle the section -->
         <a href="#news-insights">News & Insights</a>
         <a href="#careers">Careers</a>
-    </nav>
+    </nav>    
 </header>
+
+
 <!-- Links Section -->
-<div class="links-section" id="links-section">
+    <div class="links-section" id="links-section">
     <h3>Useful Links</h3>
     <div class="grid-container">
         <div class="grid-item">
@@ -120,19 +110,7 @@
     <button class="button" onclick="document.getElementById('links-section').style.display='none'">Close</button>
 </div>
 
-<script>
-    // JavaScript to toggle the visibility of the links section
-    document.getElementById('toggle-links').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        const linksSection = document.getElementById('links-section');
-        // Toggle visibility
-        if (linksSection.style.display === 'none' || linksSection.style.display === '') {
-            linksSection.style.display = 'block'; // Show the section
-        } else {
-            linksSection.style.display = 'none'; // Hide the section
-        }
-    });
-</script>
+
 
 
 
@@ -165,46 +143,46 @@
     </section>
 
     <!-- Team Members Section -->
-<div id="team-members" class="team-section" style="display: none;"> <!-- Initially hidden -->
-    <h2>Meet Our Team</h2>
-    <div class="team-grid">
-        <!-- Rega -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="Rega.jpg" alt="Rega" />
-                    <h2>Rega</h2>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Rega</h2>
-                    <p class="title">Team Leader</p>
-                    <p>A natural leader who guides the team with confidence and ensures seamless support for both the team and customers. Known for fostering collaboration and driving success through teamwork</p>
-                    <a href="mailto:ramacr@rbos.co.uk">ramacr@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
+    <div id="team-members" class="team-section" style="display: none;"> <!-- Initially hidden -->
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+         <!-- Rega -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="Rega.jpg" alt="Rega" />
+                        <h2>Rega</h2>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Rega</h2>
+                        <p class="title">Team Leader</p>
+                        <p>A natural leader who guides the team with confidence and ensures seamless support for both the team and customers. Known for fostering collaboration and driving success through teamwork</p>
+                        <a href="mailto:ramacr@rbos.co.uk">ramacr@rbos.co.uk</a>
+                        <p><button class="button">Contact</button></p>
+                 </div>
+             </div>
             </div>
-        </div>
 
-        <!-- Example: Selva -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <!-- Example: Selva -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
                     <img src="selva1.jpg" alt="Selva" />
-                    <h2>Selva</h2>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Selva</h2>
-                    <p class="title">INC - Debit</p>
-                    <p>A passionate tech enthusiast and data analyst with a knack for problem-solving. As an SME for his process, he consistently provides valuable insights and is known as a true team player who offers unwavering support to colleagues.</p>
-                    <a href="mailto:rsbdb@rbos.co.uk">rsbdb@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
+                        <h2>Selva</h2>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Selva</h2>
+                        <p class="title">INC - Debit</p>
+                        <p>A passionate tech enthusiast and data analyst with a knack for problem-solving. As an SME for his process, he consistently provides valuable insights and is known as a true team player who offers unwavering support to colleagues.</p>
+                        <a href="mailto:rsbdb@rbos.co.uk">rsbdb@rbos.co.uk</a>
+                        <p><button class="button">Contact</button></p>
+                    </div>
                 </div>
             </div>
-        </div>
-                <!-- Srinivas -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                   <!-- Srinivas -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
                     <img src="Srini.jpg" alt="Srinivas Rao">
                         <h2>Srinivas</h2>
                     </div>
@@ -218,189 +196,216 @@
                 </div>   
             </div>  
              <!-- Joseph -->
-             <div class="flip-card">
+            <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                <img src="Joseph.png" alt="Joseph" style="width:100%">
-                    <h2>Joseph</h2>
-                </div>
-                <div class="flip-card-back">
-                    <h2>Joseph</h2>
-                    <p class="title">INC - Debit</p>
-                    <p>Dedicated and reliable in his job, Joseph excels in his role. Outside of work, he embraces the role of a director in his personal life, managing it with equal care and passion.</p>                       
-                    <a href="mailto:ajbbj@rbos.co.uk">ajbbj@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        </div>
-                      <!-- Subhishya -->
-                      <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                        <img src="Subhishya.jpg" alt="Subhishya" style="width:100%">            
-                            <h2>Subhishya</h2>
-                        </div>
-                        <div class="flip-card-back">
-                            <h2>Subhishya</h2> 
-                            <p class="title">INC - Debit</p>
-                            <p>With a positive outlook on work culture, Subhishya is appreciated for having the right mindset to adapt, contribute, and excel in the team environment.</p>
-                            <a href="mailto:kvsbc@rbos.co.uk">kvsbc@rbos.co.uk</a>
-                            <p><button class="button">Contact</button></p>
-                        </div>
-                    </div>
-                </div>
-                     <!-- Pallavi -->
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                    <img src="Pallavi.png" alt="Pallavi" style="width:100%">
-                        <h2>Pallavi</h2>
+                    <img src="Joseph.png" alt="Joseph" style="width:100%">
+                        <h2>Joseph</h2>
                     </div>
                     <div class="flip-card-back">
-                        <h2>Pallavi</h2>
+                        <h2>Joseph</h2>
                         <p class="title">INC - Debit</p>
-                        <p>Known for getting the job done effectively, Pallavi is respected not just for her professionalism but also for her genuine and kind nature.</p>
-                        
-                        <a href="mailto:ypbbb@rbos.co.uk">ypbbb@rbos.co.uk</a>
+                        <p>Dedicated and reliable in his job, Joseph excels in his role. Outside of work, he embraces the role of a director in his personal life, managing it with equal care and passion.</p>                       
+                        <a href="mailto:ajbbj@rbos.co.uk">ajbbj@rbos.co.uk</a>
                         <p><button class="button">Contact</button></p>
                     </div>
                 </div>
             </div>
-            <!-- Elakkiya -->
+            <!-- Subhishya -->
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                <img src="Elakkiya.jpg" alt="Elakkiya" style="width:100%">                    
-                    <h2>Elakkiya</h2>
+                    <img src="Subhishya.jpg" alt="Subhishya" style="width:100%">            
+                            <h2>Subhishya</h2>
+                        </div>
+                        <div class="flip-card-back">
+                        <h2>Subhishya</h2> 
+                        <p class="title">INC - Debit</p>
+                        <p>With a positive outlook on work culture, Subhishya is appreciated for having the right mindset to adapt, contribute, and excel in the team environment.</p>
+                        <a href="mailto:kvsbc@rbos.co.uk">kvsbc@rbos.co.uk</a>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Pallavi -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                <img src="Pallavi.png" alt="Pallavi" style="width:100%">
+                    <h2>Pallavi</h2>
                 </div>
                 <div class="flip-card-back">
-                    <h2>Elakkiya</h2>
-                    <p class="title">FDP - Credit</p>
-                    <p>A strong and determined individual, Elakkiya exemplifies resilience and dedication in her work, making her a key asset to the team.</p>
+                    <h2>Pallavi</h2>
+                    <p class="title">INC - Debit</p>
+                    <p>Known for getting the job done effectively, Pallavi is respected not just for her professionalism but also for her genuine and kind nature.</p>
                     
-                    <a href="mailto:thulase@rbos.co.uk">thulase@rbos.co.uk</a>
+                    <a href="mailto:ypbbb@rbos.co.uk">ypbbb@rbos.co.uk</a>
                     <p><button class="button">Contact</button></p>
                 </div>
             </div>
         </div>
-    
-            <!-- Saumya -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                <img src="Saumya.jpeg" alt="Saumya" style="width:100%"> 
-                    <h2>Saumya</h2>
-                </div>  
-                <div class="flip-card-back">
-                    <h2>Saumya</h2> 
-                    <p class="title">FDP - Credit</p>
-                    <p>A proud Kerala girl who brings warmth to the team. Saumya is so approachable that some team members even learned Malayalam from her. She’s always ready to offer support and encouragement.</p>
-                    
-                    <a href="mailto:jacobsv@rbos.co.uk">jacobsv@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
+        <!-- Elakkiya -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Elakkiya.jpg" alt="Elakkiya" style="width:100%">                    
+                <h2>Elakkiya</h2>
+            </div>
+            <div class="flip-card-back">
+                <h2>Elakkiya</h2>
+                <p class="title">FDP - Credit</p>
+                <p>A strong and determined individual, Elakkiya exemplifies resilience and dedication in her work, making her a key asset to the team.</p>
+                
+                <a href="mailto:thulase@rbos.co.uk">thulase@rbos.co.uk</a>
+                <p><button class="button">Contact</button></p>
             </div>
         </div>
-    
-            <!-- Rebeka -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                <img src="Rebeka.jpg" alt="Rebeka" style="width:100%">
-                    <h2>Rebeka</h2>
-                </div>  
-                <div class="flip-card-back">
-                    <h2>Rebeka</h2>   
-                    <p class="title">FDP - Credit</p>
-                    <p>Rebeka is deeply passionate about both her personal life and her work. She approaches every task with dedication and delivers exceptional results, earning the respect of her peers.</p>
-                    
-                    <a href="mailto:rathnr@rbos.co.uk">rathnr@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        </div>
-    
-            <!-- Om Prakash -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                <img src="Om Prakash.jpg" alt="Om Prakash" style="width:100%">
-                    <h2>Om Prakash</h2>
-                </div>  
-                <div class="flip-card-back">
-                    <h2>Om Prakash</h2>
-                    <p class="title">Abusive Team</p>
-                    <p>Om Prakash skillfully handles multiple processes while also mentoring his friends. Known for his thoughtful advice and good work, he plays a dual role as a mentor and key team member.</p>                       
-                    <a href="mailto:bobbb@rbos.co.uk">bobbb@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        </div>
-    
-            <!-- Pavitha -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                <img src="Pavitha.jpeg" alt="Pavitha" style="width:100%">
-                    <h2>Pavitha</h2>
-                </div>   
-                <div class="flip-card-back">
-                    <p class="title">Abusive Team</p>
-                    <p>Pavitha excels in balancing work and family life, proving that it’s possible to succeed in both. Her commitment to her responsibilities inspires those around her.
-    
-                    </p>
-                    <a href="mailto:arulp@rbos.co.uk">arulp@rbos.co.uk</a>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        </div>
-    
-            <!-- Nithyashri -->
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                <img src="Nithyashri.jpeg" alt="Nithyashri" style="width:100%">
-                    <h2>Nithyashri</h2>
-                </div>   
-                <div class="flip-card-back">
-                    <p class="title">INC - Credit</p>
-                    <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
-
-                    <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
-                    <p><button class="button">Contact</button></p>
-                </div>
-            </div>
-        </div>
-        <script>
-            document.getElementById('toggle-team').addEventListener('click', function(e) {
-              e.preventDefault(); // Prevent default anchor behavior
-              const teamSection = document.getElementById('team-members');
-              
-              // Toggle visibility
-              if (teamSection.style.display === 'none' || teamSection.style.display === '') {
-                teamSection.style.display = 'block'; // Show the section
-              } else {
-                teamSection.style.display = 'none'; // Hide the section
-              }
-            });
-          </script>
-          
-        
-
     </div>
+
+        <!-- Saumya -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Saumya.jpeg" alt="Saumya" style="width:100%"> 
+                <h2>Saumya</h2>
+            </div>  
+            <div class="flip-card-back">
+                <h2>Saumya</h2> 
+                <p class="title">FDP - Credit</p>
+                <p>A proud Kerala girl who brings warmth to the team. Saumya is so approachable that some team members even learned Malayalam from her. She’s always ready to offer support and encouragement.</p>
+                
+                <a href="mailto:jacobsv@rbos.co.uk">jacobsv@rbos.co.uk</a>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Rebeka -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Rebeka.jpg" alt="Rebeka" style="width:100%">
+                <h2>Rebeka</h2>
+            </div>  
+            <div class="flip-card-back">
+                <h2>Rebeka</h2>   
+                <p class="title">FDP - Credit</p>
+                <p>Rebeka is deeply passionate about both her personal life and her work. She approaches every task with dedication and delivers exceptional results, earning the respect of her peers.</p>
+                
+                <a href="mailto:rathnr@rbos.co.uk">rathnr@rbos.co.uk</a>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Om Prakash -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Om Prakash.jpg" alt="Om Prakash" style="width:100%">
+                <h2>Om Prakash</h2>
+            </div>  
+            <div class="flip-card-back">
+                <h2>Om Prakash</h2>
+                <p class="title">Abusive Team</p>
+                <p>Om Prakash skillfully handles multiple processes while also mentoring his friends. Known for his thoughtful advice and good work, he plays a dual role as a mentor and key team member.</p>                       
+                <a href="mailto:bobbb@rbos.co.uk">bobbb@rbos.co.uk</a>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Pavitha -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Pavitha.jpeg" alt="Pavitha" style="width:100%">
+                <h2>Pavitha</h2>
+            </div>   
+            <div class="flip-card-back">
+                <h2>Pavitha</h2>
+                <p class="title">Abusive Team</p>
+                <p>Pavitha excels in balancing work and family life, proving that it’s possible to succeed in both. Her commitment to her responsibilities inspires those around her.
+
+                </p>
+                <a href="mailto:arulp@rbos.co.uk">arulp@rbos.co.uk</a>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Nithyashri -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Nithyashri.jpeg" alt="Nithyashri" style="width:100%">
+                <h2>Nithyashri</h2>
+            </div>   
+            <div class="flip-card-back">
+                <h2>Nithyashri</h2>
+                <p class="title">INC - Credit</p>
+                <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
+                <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preethi -->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+        <img src="Preethi.jpg" alt="Preethi" style="width:100%">
+            <h2>Preethi</h2>
+        </div>   
+        <div class="flip-card-back">
+            <h2>Preethi</h2>
+            <p class="title">PSD</p>
+            <p>A talented dancer and a smart worker, Preethi consistently delivers high productivity and quality results without any errors. Her vibrant personality shines both at work and beyond.</p>
+            <a href="mailto:preepei@rbos.co.uk">preepei@rbos.co.uk</a>
+            <p><button class="button">Contact</button></p>
+        </div>
+    </div>
+</div>
 </section>
-
-<!-- Toggle Button -->
-<div class="toggle-button" onclick="toggleLinks()">Links</div>
-
-
-
+        </div>                  
+    </div>   
+    <!-- Toggle Button -->
+    <div class="toggle-button" onclick="toggleLinks()">Links</div>  
     <!-- Footer Section -->
     <footer class="footer">
         <p>&copy; 2024 NatWest Group Team. All rights reserved.</p>
     </footer>
+    <script>
+        // Wait for the DOM to fully load before running the script
+        document.addEventListener("DOMContentLoaded", function () {
+            // Toggle for Team Members
+            document.getElementById('toggle-team').addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor behavior
+                const teamSection = document.getElementById('team-members');
+                // Toggle visibility
+                if (teamSection.style.display === 'none' || teamSection.style.display === '') {
+                    teamSection.style.display = 'block'; // Show the section
+                    document.getElementById('who-we-are').style.display = 'none'; // Hide "Who We Are"
+                } else {
+                    teamSection.style.display = 'none'; // Hide the section
+                    document.getElementById('who-we-are').style.display = 'block'; // Show "Who We Are"
+                }
+            });
 
-
- 
+            // Toggle for Links Section
+            document.getElementById('toggle-links').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                const linksSection = document.getElementById('links-section');
+                // Toggle visibility
+                if (linksSection.style.display === 'none' || linksSection.style.display === '') {
+                    linksSection.style.display = 'block'; // Show the section
+                } else {
+                    linksSection.style.display = 'none'; // Hide the section
+                }
+            });
+        });
+    </script>
 </body>
 </html>
+
