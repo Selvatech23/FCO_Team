@@ -384,7 +384,79 @@ body {
 
 
 
+/* ******************************************************************* /*
+/* CSS for the games grid */
+/* CSS for the games grid */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+    margin-bottom: 50px; /* Add space below the last card */
+}
 
+.game-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
 
+.game-card:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover */
+}
 
+.game-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
 
+.game-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Style for the game images */
+.game-image {
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+/* Close button container (ensures it is on a separate row) */
+.close-button-container {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    margin-top: 20px; /* Space between the last card and the button */
+}
+
+#close-games {
+    background-color: #754d9e; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-bottom: 15px; /* Margin below the button */
+}
+
+#close-games:hover {
+    background-color: #7d5cae; /* Darker red on hover */
+}
+#games-section {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+#close-games {
+    margin-top: auto; /* Push the button to the bottom */
+}
