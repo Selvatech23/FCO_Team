@@ -6,27 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
     <h1>Rock, Paper, Scissors Game</h1>
+
+    <!-- Buttons to select rock, paper, or scissors -->
     <button id="rock">Rock</button>
     <button id="paper">Paper</button>
     <button id="scissors">Scissors</button>
-    <div id="result"></div>
-    
-    <script>
-        // JavaScript for the game logic
-        document.getElementById('rock').onclick = playGame.bind(null, 'rock');
-        document.getElementById('paper').onclick = playGame.bind(null, 'paper');
-        document.getElementById('scissors').onclick = playGame.bind(null, 'scissors');
 
+    <!-- Display result of each round -->
+    <div id="result"></div>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+        <p>Player Score: <span id="player-score">0</span></p>
+        <p>Computer Score: <span id="computer-score">0</span></p>
+    </div>
+
+    <div id="winner-message"></div> <!-- Display the final winner -->
+
+    <script>
+        // Initialize player and computer scores
+        let playerScore = 0;
+        let computerScore = 0;
+
+        // Attach click events to buttons
+        document.getElementById('rock').onclick = () => playGame('rock');
+        document.getElementById('paper').onclick = () => playGame('paper');
+        document.getElementById('scissors').onclick = () => playGame('scissors');
+
+        // Function to play the game
         function playGame(playerChoice) {
+            // Choices available
             const choices = ['rock', 'paper', 'scissors'];
             const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+            // Get result display and scores elements
             const resultDisplay = document.getElementById('result');
+            const playerScoreDisplay = document.getElementById('player-score');
+            const computerScoreDisplay = document.getElementById('computer-score');
+            const winnerMessage = document.getElementById('winner-message');
 
             let result;
+
+            // Determine the winner of the round
             if (playerChoice === computerChoice) {
                 result = 'It\'s a tie!';
             } else if (
@@ -34,11 +58,35 @@
                 (playerChoice === 'paper' && computerChoice === 'rock') ||
                 (playerChoice === 'scissors' && computerChoice === 'paper')
             ) {
-                result = 'You win!';
+                result = 'You win this round!';
+                playerScore++;
             } else {
-                result = 'You lose!';
+                result = 'Computer wins this round!';
+                computerScore++;
             }
+
+            // Update the scores in the UI
+            playerScoreDisplay.textContent = playerScore;
+            computerScoreDisplay.textContent = computerScore;
+
+            // Display the result of the round
             resultDisplay.innerHTML = `You chose ${playerChoice}. Computer chose ${computerChoice}. ${result}`;
+
+            // Check if someone has reached the score limit (30)
+            if (playerScore >= 30) {
+                winnerMessage.innerHTML = '<strong>You win the match!</strong>';
+                disableButtons(); // Disable further play
+            } else if (computerScore >= 30) {
+                winnerMessage.innerHTML = '<strong>Computer wins the match!</strong>';
+                disableButtons(); // Disable further play
+            }
+        }
+
+        // Function to disable the game buttons after someone wins
+        function disableButtons() {
+            document.getElementById('rock').disabled = true;
+            document.getElementById('paper').disabled = true;
+            document.getElementById('scissors').disabled = true;
         }
     </script>
 </body>

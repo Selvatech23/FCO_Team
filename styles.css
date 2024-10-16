@@ -460,3 +460,54 @@ body {
 #close-games {
     margin-top: auto; /* Push the button to the bottom */
 }
+
+
+
+/* Ticker styles in home page ********************************************    */
+
+
+/* Team Updates Ticker Styles */
+.team-updates {
+    display: flex;
+    align-items: center;
+    background-color: #966db5;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 15px 0; /* Add space between sections */
+}
+
+.updates-label {
+    background-color: #512D6D;
+    padding: 8px 12px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.updates-ticker {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.updates-ticker p {
+    display: inline-block;
+    animation: ticker 12s linear infinite;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Animation for scrolling text */
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* **************************************************************************************************** */
