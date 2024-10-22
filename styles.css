@@ -511,3 +511,52 @@ body {
     }
 }
 /* **************************************************************************************************** */
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Adjust according to design */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Individual Slides */
+.slide {
+    display: none; /* Hide all slides initially */
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Fading Animation */
+.fade {
+    animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation Dots */
+.dot-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}

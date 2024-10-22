@@ -1,8 +1,11 @@
 // Static team updates (You can modify these to suit your team needs)
 const teamUpdates = [
-    "Due to heavy rainfall in Chennai location, everyone is advised to take WFH.",
-    "Reminder: Submit your timesheets by Monday.",
-    "Our team meeting has been postponed to Friday at 4 PM."
+    "Update MI Counts on Daily Basis",
+    "Huddle meeting by 3.00 pm IST",
+    "Ensure to Complete 8 days/40% of RTO ",
+    "Oct 24 is Diwali Celebration,Request everyone to come in traditional wears.",
+    "Overview Results got published.",
+    "Victoria vist to Chennai by Nov24"
 ];
 
 let currentUpdateIndex = 0;
