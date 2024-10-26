@@ -640,3 +640,21 @@ body {
 }
 
 /* end of announcemet styling */
+/* Mobile-Friendly Adjustments */
+@media (max-width: 768px) {
+    .flip-card {
+      width: 100%;  /* Full width on mobile */
+      height: auto;  /* Auto height based on content */
+      overflow: hidden;  /* Hide overflow to prevent horizontal scroll */
+    }
+  
+    .flip-card-inner {
+      transform: none;  /* Disable flipping for mobile */
+    }
+  
+    .flip-card-front, .flip-card-back {
+      position: relative;  /* Stack front and back */
+      overflow-y: auto;  /* Enable vertical scroll if needed */
+      max-height: 400px;  /* Set a maximum height for scrolling */
+    }
+  }
