@@ -10,6 +10,11 @@
 
 </head>
 <body>
+            <!-- Birthday Banner -->
+            <div id="birthday-banner">
+                🎉 Happy Birthday, <span id="birthday-person"></span>! 
+                <button id="close-banner" style="margin-left: 10px;">X</button>
+            </div>
 <!-- Header Section -->
 <header class="header">
     <div class="logo">
@@ -23,7 +28,8 @@
         <a href="#" id="toggle-games">Games</a> <!-- Click to show Games Section -->
     </nav>    
 </header>
-    
+
+
     <div class="team-updates">
         <span class="updates-label">Team Updates:</span>
         <div class="updates-ticker" id="updates-ticker">
@@ -57,7 +63,7 @@
         </div>
         <div class="grid-item">
             <a href="https://www.natwestgroup.com/" target="_blank">
-                <img src="data:image/jpeg;base64,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" alt="NatWest Group">
+                <img src="https://www.natwestgroup.com/news-and-insights/news-room/photo-library/brand-logos/_jcr_content/root/responsivegrid/container_1543510039/productlistingmultip/product-listing-multiple-product/product_1/productimage.coreimg.82.768.jpeg/1718117614883/nwg-natwestgroup-logo-white-867x398.jpeg" alt="NatWest Group">
                 <p>NatWest Group</p>
             </a>
         </div>
@@ -123,8 +129,8 @@
             </a>
         </div> 
         <div class="grid-item">
-            <a href="https://tcs.tsyseurope.com/prweb/PRWebLDAP1/WgVvXYNg-ZXRKjwI4ND_kasIU5DIFkWrv27UEwJodZI%28*/!STANDARD">
-                <img src="data:image/jpeg;base64,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" alt="Outlook">
+            <a href="https://tcs.tsyseurope.com/prweb/PRWebLDAP1/WgVvXYNg-ZXRKjwI4ND_kasIU5DIFkWrv27UEwJodZI%28*/!STANDARD" target="_blank">
+                <img src="data:image/png;base64,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" alt="TSYS">
                 <p>TSYS</p>
             </a>
         </div>
@@ -158,6 +164,7 @@
                 <button class="button">See our latest stories</button>
                 <button class="button">Visit our news room</button>
             </div>
+
         </div>
         <!-- Slideshow / Carousel Section -->
         <div class="main-image">
@@ -195,15 +202,35 @@
             <li><a href="#">How GenAI is evolving customer journeys in retail banking</a></li>
             <li><a href="#">Pioneering efforts to support SMEs in the UK</a></li>
         </ul>
-        <div class="team-image">
-            <img src="https://www.natwestgroup.com/content/dam/natwestgroup_com/new-images/home/natwest-olympic-team-gb.jpg" alt="Team Image">
+        <div id="announcements-section">
+            <h2>Announcements</h2>
+            <div id="announcements-list"></div>
+            <textarea id="announcement-input" placeholder="Type your announcement here..."></textarea>
+            <button id="add-announcement">Add Announcement</button>
         </div>
+
     </section>
 
     <!-- Team Members Section -->
     <div id="team-members" class="team-section" style="display: none;"> <!-- Initially hidden -->
         <h2>Meet Our Team</h2>
         <div class="team-grid">
+         <!-- Saravanan -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+            <img src="Saravanan.jpeg" alt="Saravanan" style="width:100%">
+                <h2>Saravanan</h2>
+            </div>   
+            <div class="flip-card-back">
+                <h2>Saravanan</h2>
+                <p class="title">Manager</p>
+                <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
+                <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
+                <p><button class="button">Contact</button></p>
+            </div>
+        </div>
+    </div>
          <!-- Rega -->
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -253,6 +280,22 @@
                     </div>
                 </div>   
             </div>  
+                   <!-- Kusha -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img src="Kusha.jpg" alt="Kusha">
+                        <h2>Kusha</h2>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Kusha</h2>
+                        <p class="title">INC - Debit</p>
+                        <p>A quick learner and tech enthusiast, Srinivas combines smart thinking with strong data analysis skills. Highly supportive, he adds tremendous value to the team with his proactive approach.</p>
+                        <a href="mailto:raosx@rbos.co.uk">raosx@rbos.co.uk</a>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>   
+            </div> 
              <!-- Joseph -->
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -269,6 +312,22 @@
                     </div>
                 </div>
             </div>
+                <!-- Joanna -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                    <img src="Joanna.png" alt="Joanna" style="width:100%">
+                        <h2>Joanna</h2>
+                    </div>
+                    <div class="flip-card-back">
+                        <h2>Joanna</h2>
+                        <p class="title">INC - Debit</p>
+                        <p>Dedicated and reliable in his job, Joseph excels in his role. Outside of work, he embraces the role of a director in his personal life, managing it with equal care and passion.</p>                       
+                        <a href="mailto:ajbbj@rbos.co.uk">ajbbj@rbos.co.uk</a>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>    
             <!-- Subhishya -->
             <div class="flip-card">
                 <div class="flip-card-inner">
@@ -392,6 +451,23 @@
         </div>
     </div>
 
+            <!-- Tanu-->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                <img src="Tanu.jpeg" alt="Tanu" style="width:100%">
+                    <h2>Tanu</h2>
+                </div>   
+                <div class="flip-card-back">
+                    <h2>Tanu</h2>
+                    <p class="title">INC - Credit</p>
+                    <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
+                    <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
+                    <p><button class="button">Contact</button></p>
+                </div>
+            </div>
+        </div>
+
         <!-- Nithyashri -->
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -465,6 +541,8 @@
     <script src="games/game1/script.js"></script>
     <script src="script.js"></script>
     <script src="slideshow.js"></script>
+    <script src="birthday.js"></script>
+    <script src="announce.js"></script>
 </body>
 </html>
 

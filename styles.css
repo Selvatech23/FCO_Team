@@ -562,5 +562,81 @@ body {
 }
 
 
+/* Birthday Banner Style */
+#birthday-banner {
+    background-color: #f6d36c; /* Lighter gold color for celebration */
+    color: black;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above other elements */
+    display: none; /* Hidden by default, shown when a birthday is detected */
+    animation: slide-in 1s ease-out; /* Slide-in animation */
+}
 
+/* Keyframes for Slide-in Animation */
+@keyframes slide-in {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
 
+/* Close Button Styling */
+#close-banner {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333; /* Color for the close button */
+}
+
+/* Add hover effect for the close button */
+#close-banner:hover {
+    color: #ff0000; /* Change color on hover for better visibility */
+}
+
+/* End of Birthday Banner Styles */
+
+/* Announcement styling */
+/* Announcements Section Styles */
+#announcements-section {
+    background-color: #f8f9fa; /* Light background for readability */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+
+#announcements-section h2 {
+    color: #333;
+}
+
+#announcements-list {
+    margin-bottom: 15px;
+}
+
+#announcement-input {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+#add-announcement {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#add-announcement:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* end of announcemet styling */
