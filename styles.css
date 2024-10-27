@@ -724,3 +724,34 @@ body {
         padding: 10px;
     }
 }
+
+/* Team members */
+
+
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .team-container {
+        grid-template-columns: 1fr; /* 1 card per row on mobile */
+        padding: 10px;
+        margin: 0;
+    }
+
+    .flip-card {
+        height: auto; /* Allow cards to adjust height */
+        max-width: 100%; /* Make the card fill the screen width */
+    }
+
+    .flip-card-inner {
+        height: auto;
+    }
+}
+
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#team-members {
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
