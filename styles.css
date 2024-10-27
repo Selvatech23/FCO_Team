@@ -635,40 +635,85 @@ body {
 /* End of Birthday Banner Styles */
 
 /* Announcement styling */
-/* Announcements Section Styles */
-#announcements-section {
-    background-color: #f8f9fa; /* Light background for readability */
+/* Announcement Section Container */
+#announcementForm {
+    max-width: 600px;
+    margin: 30px auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    margin-top: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
 }
 
-#announcements-section h2 {
+/* Heading Styling */
+#announcementForm h1 {
+    text-align: center;
+    margin-bottom: 15px;
     color: #333;
 }
 
-#announcements-list {
-    margin-bottom: 15px;
-}
-
-#announcement-input {
+/* Form Inputs and Textarea */
+#announcementForm input[type="text"],
+#announcementForm textarea {
     width: 100%;
-    height: 60px;
-    margin-bottom: 10px;
     padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-#add-announcement {
-    background-color: #007bff; /* Bootstrap primary color */
+/* Textarea */
+#announcementForm textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+/* Submit Button */
+#announcementForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
+    border-radius: 4px;
     font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#add-announcement:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+#announcementForm button:hover {
+    background-color: #218838;
+}
+
+/* Announcements Display Section */
+#announcements {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Announcement Cards (if individual announcements are displayed) */
+.announcement-card {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.announcement-card h3 {
+    margin: 0;
+    color: #007bff;
+}
+
+.announcement-card p {
+    margin: 5px 0;
+    color: #555;
 }
 
 /* end of announcemet styling */
