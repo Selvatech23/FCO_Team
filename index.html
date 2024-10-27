@@ -202,12 +202,17 @@
             <li><a href="#">How GenAI is evolving customer journeys in retail banking</a></li>
             <li><a href="#">Pioneering efforts to support SMEs in the UK</a></li>
         </ul>
-        <div id="announcements-section">
-            <h2>Announcements</h2>
-            <div id="announcements-list"></div>
-            <textarea id="announcement-input" placeholder="Type your announcement here..."></textarea>
-            <button id="add-announcement">Add Announcement</button>
+        <div>
+            <h1>Add Announcement</h1>
+            <form id="announcementForm">
+                <input type="text" id="title" placeholder="Title" required />
+                <textarea id="content" placeholder="Content" required></textarea>
+                <input type="text" id="author" placeholder="Author" required />
+                <button type="submit">Add Announcement</button>
+            </form>
+            <div id="announcements"></div>
         </div>
+        
 
     </section>
 
@@ -542,6 +547,7 @@
     <script src="script.js"></script>
     <script src="slideshow.js"></script>
     <script src="birthday.js"></script>
+    <script src="announce.js"></script>
     
     
 </body>
