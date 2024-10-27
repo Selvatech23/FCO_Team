@@ -270,6 +270,8 @@ body {
     margin-top: 20px; /* Space above the toggle button */
 }
 
+/* 000000000000000000000000000000*/
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     .header {
@@ -313,14 +315,44 @@ body {
         font-size: 1.5rem;
     }
 
+    /* Team Members Flip Cards */
     .team-container {
-        grid-template-columns: 1fr;
+        display: grid; /* Ensure that the container uses grid layout */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+        gap: 10px; /* Space between cards */
+        padding: 20px; /* Padding around the team container */
+    }
+
+    .flip-card {
+        width: 100%; /* Full width for mobile */
+        height: auto; /* Auto height to fit content */
+        perspective: 1000px; /* Keep perspective for 3D effect */
+        overflow: hidden; /* Hide overflow */
+    }
+
+    .flip-card-inner {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+    }
+
+    .flip-card-front, .flip-card-back {
+        backface-visibility: hidden; /* Hide back when showing front */
+        position: absolute; /* Position both sides */
+        width: 100%;
+        height: 100%;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg); /* Flip on hover */
     }
 
     .footer {
         padding: 10px;
     }
 }
+
 
 /*useful links  */
 .links-section {
@@ -640,3 +672,55 @@ body {
 }
 
 /* end of announcemet styling */
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        padding: 10px 0;
+    }
+
+    .main-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-content h1 {
+        font-size: 2rem;
+    }
+
+    .button {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .main-image img {
+        width: 100%;
+    }
+
+    .stories-section {
+        padding: 20px;
+    }
+
+    .stories-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+}
