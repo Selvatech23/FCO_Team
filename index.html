@@ -7,6 +7,9 @@
     <title>Team Page - NatWest Group</title>
     <link rel="icon" href="Natwest.jpg" type="jpg">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="team-mi-styles.css">
+
+
 
 </head>
 <body>
@@ -21,14 +24,39 @@
         <img src="https://www.natwestgroup.com/content/dam/championlogos/Logo_Wh_NatWestGroupColleague-Hor.svg" alt="NatWest Group Logo">
     </div>
     <nav class="navbar">
-        <a href="#who-we-are">Who we are</a>
+        <a href="#" id="toggle-team-mi">Team MI</a> <!-- Link for Team MI dropdown -->
         <a href="#" id="toggle-team">Team Members</a> 
         <a href="#" id="toggle-links">Links</a> <!-- Link to toggle the section -->
         <a href="#news-insights">News & Insights</a>
         <a href="#" id="toggle-games">Games</a> <!-- Click to show Games Section -->
     </nav>    
 </header>
-
+<div>
+    <div id="team-mi-dropdown" style="display: none;">
+        <select id="process-select">
+            <option value="">Select Process</option>
+            <option value="FDP-Credit">FDP-Credit</option>
+            <option value="INC-Debit">INC-Debit</option>
+            <option value="PSD-Credit-1">PSD-Credit-1</option>
+            <option value="PSD-Credit-2">PSD-Credit-2</option>
+            <option value="INC-Credit">INC-Credit</option>
+            <option value="Abusive">Abusive</option>
+        </select>
+        <select id="timeframe-select">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="yearly">Yearly</option>
+        </select>
+    </div>
+    <div id="data-display" style="display: none;">
+        <p>Selected Process: <span id="selected-process"></span></p>
+        <div id="data-info"></div>
+        <canvas id="miChart"></canvas>
+    </div>
+</div>
+ <!-- Team Updates -->
 
     <div class="team-updates">
         <span class="updates-label">Team Updates:</span>
@@ -50,6 +78,9 @@
             <button id="close-games">Close Games Section</button> <!-- Close button -->
         </div>
     </section>
+
+
+    
 
 <!-- Links Section -->
     <div class="links-section" id="links-section">
@@ -241,8 +272,8 @@
             </div>   
             <div class="flip-card-back">
                 <h2>Saravanan</h2>
-                <p class="title">Manager</p>
-                <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
+                <p class="title">Team Manager</p>
+                <p>With over 19 years of experience in diverse fields such as banking, fraud and risk management, chargebacks, and mortgage, Saravanan leads a team of 15+ members. He ensures his team consistently meets objectives that support both customer satisfaction and senior management goals. His leadership emphasizes efficiency and excellence in task completion for the benefit of all stakeholders.</p>
                 <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
                 <p><button class="button">Contact</button></p>
             </div>
@@ -307,7 +338,7 @@
                     <div class="flip-card-back">
                         <h2>Kusha</h2>
                         <p class="title">INC - Debit</p>
-                        <p>A quick learner and tech enthusiast, Srinivas combines smart thinking with strong data analysis skills. Highly supportive, he adds tremendous value to the team with his proactive approach.</p>
+                        <p>Kusha is a dedicated Senior Analyst in the Interest and Charges team, known for his exceptional skills in allocation tasks. Originally from Odisha, he brings strong analytical expertise and a commitment to excellence in his work.</p>
                         <a href="mailto:raosx@rbos.co.uk">raosx@rbos.co.uk</a>
                         <p><button class="button">Contact</button></p>
                     </div>
@@ -339,8 +370,8 @@
                     <div class="flip-card-back">
                         <h2>Joanna</h2>
                         <p class="title">INC - Debit</p>
-                        <p>Dedicated and reliable in his job, Joseph excels in his role. Outside of work, he embraces the role of a director in his personal life, managing it with equal care and passion.</p>                       
-                        <a href="mailto:ajbbj@rbos.co.uk">ajbbj@rbos.co.uk</a>
+                        <p>A quick learner, Joanna is dedicated to meeting SLAs while delivering high productivity and quality in her work. Her attention to detail ensures timely and accurate results, making her a reliable contributor to the team.</p>                       
+                        <a href="mailto:jesseij@rbos.co.uk">ajbbj@rbos.co.uk</a>
                         <p><button class="button">Contact</button></p>
                     </div>
                 </div>
@@ -355,7 +386,7 @@
                         <div class="flip-card-back">
                         <h2>Subhishya</h2> 
                         <p class="title">INC - Debit</p>
-                        <p>With a positive outlook on work culture, Subhishya is appreciated for having the right mindset to adapt, contribute, and excel in the team environment.</p>
+                        <p>Subhishya is having the right mindset to adapt, contribute and confidence attitude.</p>
                         <a href="mailto:kvsbc@rbos.co.uk">kvsbc@rbos.co.uk</a>
                         <p><button class="button">Contact</button></p>
                     </div>
@@ -477,8 +508,8 @@
                 </div>   
                 <div class="flip-card-back">
                     <h2>Tanu</h2>
-                    <p class="title">INC - Credit</p>
-                    <p>Nithyashri performs outstanding work while also managing life with grace. She’s admired for her ability to maintain balance and dedication in all areas.</p>
+                    <p class="title">PSD- Debit</p>
+                    <p>Tanu is responsible for the PSD refunds process, consistently meeting SLAs while delivering high productivity and quality in her work. Her focus on efficiency ensures that tasks are completed effectively and on time</p>
                     <a href="mailto:tnbbh@rbos.co.uk">tnbbh@rbos.co.uk</a><br>
                     <p><button class="button">Contact</button></p>
                 </div>
@@ -511,7 +542,7 @@
         </div>   
         <div class="flip-card-back">
             <h2>Preethi</h2>
-            <p class="title">PSD</p>
+            <p class="title">PSD- Credit</p>
             <p>A talented dancer and a smart worker, Preethi consistently delivers high productivity and quality results without any errors. Her vibrant personality shines both at work and beyond.</p>
             <a href="mailto:preepei@rbos.co.uk">preepei@rbos.co.uk</a>
             <p><button class="button">Contact</button></p>
@@ -528,7 +559,7 @@
         <div class="flip-card-back">
             <h2>Ambrini</h2>
             <p class="title">PSD</p>
-            <p>A talented dancer and a smart worker, Preethi consistently delivers high productivity and quality results without any errors. Her vibrant personality shines both at work and beyond.</p>
+            <p>As an all-rounder, Ambrini possesses extensive knowledge of every process within the team. Her readiness to assist at any time and her supportive nature contribute significantly to team cohesion, ensuring that everyone has the help they need to succeed.</p>
             <a href="mailto:preepei@rbos.co.uk">preepei@rbos.co.uk</a>
             <p><button class="button">Contact</button></p>
         </div>
@@ -576,7 +607,8 @@
     <script src="slideshow.js"></script>
     <script src="birthday.js"></script>
     <script src="announce.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="teammi.js"></script>
     
 </body>
 </html>

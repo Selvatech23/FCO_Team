@@ -1,0 +1,42 @@
+
+.navbar {
+    background-color: #512D6D;
+    overflow: hidden;
+  
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#team-mi-dropdown {
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#data-display {
+    margin-top: 20px;
+}
+
+h3, h4 {
+    margin: 0 0 10px 0;
+}
+
+canvas {
+    max-width: 100%;
+}
