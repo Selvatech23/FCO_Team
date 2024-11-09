@@ -1,117 +1,101 @@
-/* Chatbot Header Styling */
-#chatbot-header {
-    display: flex;
-    flex-direction: column; /* Stack title and status vertically */
-    justify-content: center; /* Center align items horizontally */
-    align-items: center; /* Center align items vertically */
-    font-size: 18px;
-    font-weight: bold;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px 5px 0 0; /* Rounded top corners */
-    position: relative; /* Position close button */
+/* ========== Chatbot Styles ========== */
+
+/* Chatbot Container Styling */
+#chatbot-container {
+    display: none; /* Initially hidden */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
 }
 
-/* Chatbot title styling */
-#chatbot-title {
-    font-size: 20px; /* Bigger font for Chatbot title */
-    font-weight: bold;
-}
-
-/* Chatbot status styling */
-#chat-status {
-    font-size: 14px;
-    color: green;
-    margin-top: 5px; /* Add space between title and status */
-    font-weight: normal;
-}
-
-/* Close button styling */
-#close-chatbot {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 5px;
-    position: absolute;
-    top: 10px;
-    right: 10px; /* Positioning close button at the top-right */
-}
-
-/* Chatbot message container styling */
-#chatbot-messages {
-    padding: 10px;
-    height: 300px;
-    overflow-y: auto;
-    background-color: #f0f0f0;
+/* Robot Image Styling */
+.robot-image {
+    position: fixed; /* Keep the robot visible while scrolling */
+    bottom: 80px; /* Position above the chatbot container */
+    left: 20px; /* Position on the left side */
+    width: 550px; /* Enlarged width for better visibility */
+    height: 550px; /* Enlarged height for better visibility */
+    display: none; /* Initially hidden */
+    transition: transform 3s ease-in-out;
 }
 
 
 
+/* Trigger robot animation when chatbot is open */
+.robot-image.move {
+    display: block; /* Show the robot image */
+    animation: moveRobot 5s infinite; /* Infinite loop of left to right movement */
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Button to open chatbot at bottom-right */
+/* Styling for Chatbot Button */
 #open-chatbot-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #008CBA;
+    bottom: 10px;
+    right: 10px;
+    background-color: #007bff;
     color: white;
-    font-weight: bold;
-    padding: 10px 20px;
     border: none;
-    border-radius: 20px;
+    padding: 15px;
+    border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    transition: background-color 0.3s ease;
 }
 
-#open-chatbot-button:hover {
-    background-color: #357ab8;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Chatbot container styling */
 #chatbot-container {
+    display: none; /* Initially hidden */
     position: fixed;
     bottom: 80px;
     right: 20px;
     width: 350px;
     max-height: 500px;
     background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
     overflow: hidden;
-    display: none;  /* Initially hidden */
+    z-index: 1000;
     flex-direction: column;
     font-family: Arial, sans-serif;
-    z-index: 1000;
 }
 
 /* Chatbot header with close button */
 #chatbot-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #4a90e2;
     color: white;
     padding: 10px;
-    text-align: center;
     font-weight: bold;
     font-size: 16px;
+    border-radius: 5px 5px 0 0;
     position: relative;
 }
 
@@ -125,14 +109,23 @@
     cursor: pointer;
     background: none;
     border: none;
-    padding: 5px;
+}
+
+/* Chatbot status styling */
+#chat-status {
+    font-size: 14px;
+    color: green;
+    margin-top: 5px;
+    font-weight: normal;
 }
 
 /* Chat message area */
 #chatbot-messages {
     flex-grow: 1;
     padding: 10px;
+    height: 300px;
     border-top: 1px solid #ddd;
+    background-color: #f0f0f0;
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #4a90e2 #f1f1f1;
@@ -165,12 +158,50 @@
 }
 
 /* Input field styling */
-#chatbot-container #user-input {
+#user-input {
     width: 100%;
     padding: 12px;
-    border: none;
     border-top: 1px solid #ddd;
     font-size: 14px;
     outline: none;
     box-sizing: border-box;
+}
+
+/* ========== Button Styling ========== */
+
+/* Button to open chatbot at bottom-right */
+#open-chatbot-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #008CBA;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+#open-chatbot-button:hover {
+    background-color: #357ab8;
+}
+
+/* ========== Robot Image Styling ========== */
+
+
+
+/* Robot animation to move left to right */
+@keyframes moveRobot {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(600px); }
+    100% { transform: translateX(0); }
+}
+
+/* Trigger robot animation when chatbot is open */
+#chatbot-container.show-chatbot ~ .robot-image {
+    animation: moveRobot 5s infinite;
 }
