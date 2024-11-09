@@ -9,17 +9,42 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="team-mi-styles.css">
     <link rel="stylesheet" href="learning.css">
+    <link rel="stylesheet" href="chatbot.css">
 
 
 
 
 </head>
 <body>
+
             <!-- Birthday Banner -->
             <div id="birthday-banner">
                 🎉 Happy Birthday, <span id="birthday-person"></span>! 
                 <button id="close-banner" style="margin-left: 10px;">X</button>
             </div>
+
+
+            <button id="open-chatbot-button" class="chatbot-btn">
+                <span class="chatbot-icon">💬</span>
+                Let’s Chat!
+            </button>
+            
+
+
+<!-- Chatbot Container -->
+<div id="chatbot-container">
+    <div id="chatbot-header">
+        <div id="chatbot-title">Chatbot</div> <!-- Added a wrapper for the title -->
+        <br>
+        <div id="chat-status">Online</div> <!-- Moved Online status below the title -->
+        <button id="close-chatbot">&times;</button>
+    </div>
+    <div id="chatbot-messages"></div>
+    <input type="text" id="user-input" placeholder="Type your message here...">
+</div>
+
+
+
 <!-- Header Section -->
 <header class="header">
     <div class="logo">
@@ -716,6 +741,9 @@
             });
         });
     </script>
+
+
+
     <script src="games/game1/script.js"></script>
     <script src="script.js"></script>
     <script src="slideshow.js"></script>
@@ -724,7 +752,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="teammi.js"></script>
     <script src="learning.js"></script>
-    
+    <script src="chatbot.js"></script>
+
+
 </body>
 </html>
 
