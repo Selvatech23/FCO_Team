@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="team-mi-styles.css">
     <link rel="stylesheet" href="learning.css">
     <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="automation.css">
 
 
 
@@ -61,9 +62,68 @@
         <a href="blog.html"target="_blank">Blog</a> <!-- Updated link to point to the blog page -->
         <a href="#" id="toggle-personal-learning">Personal Learning</a> <!-- Link for Personal Learning -->
         <a href="#" id="toggle-games">Games</a> <!-- Click to show Games Section -->
+        <a href="#" id="toggle-automation">Automation</a> <!-- New link for Automation -->
     </nav>    
 </header>
 <div>
+
+
+
+
+
+
+    <!-- Automation Section (hidden initially) -->
+    <div class="automation-container" id="automation-section" style="display: none;">
+        <h1 class="automation-header">Automation Tasks</h1>
+
+        <!-- Grid View for Automation Tasks -->
+        <div class="task-grid" id="task-grid">
+            <!-- Email Task Card -->
+            <div class="task-card" id="email-task">
+                <h3>Email Task</h3>
+                <p>Click to send an email to the manager</p>
+            </div>
+            <!-- Add other tasks here in the future -->
+        </div>
+
+        <!-- Email Form (Hidden initially) -->
+        <div class="email-form" id="email-form" style="display: none;">
+            <h2 class="form-header">Send Email</h2>
+            <form action="mailto:" method="get" enctype="text/plain">
+                <label for="recipient">Recipient:</label>
+                <input type="email" id="recipient" name="to" placeholder="Enter recipient's email" required><br><br>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Enter email subject" required><br><br>
+
+                <label for="body">Body:</label><br>
+                <textarea id="body" name="body" rows="4" cols="50" placeholder="Enter email body" required></textarea><br><br>
+
+                <button type="submit">Send Email</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Show the Automation section when clicked
+        document.getElementById('toggle-automation').addEventListener('click', function() {
+            var automationSection = document.getElementById('automation-section');
+            if (automationSection.style.display === 'none') {
+                automationSection.style.display = 'block'; // Show the grid of tasks
+            } else {
+                automationSection.style.display = 'none'; // Hide the grid of tasks
+            }
+        });
+
+        // Show the email form when the Email Task card is clicked
+        document.getElementById('email-task').addEventListener('click', function() {
+            document.getElementById('email-form').style.display = 'block'; // Show the email form
+        });
+    </script>
+
+    
+
+
 
 
 
@@ -168,8 +228,7 @@
     </section>
 
 
-    <iframe src="https://natwest.atlassian.net/wiki/download/attachments/1972354425/INC%20Credit.pdf?api=v2" width="100%" height="600px"></iframe>
-
+    
 <!-- Links Section -->
     <div class="links-section" id="links-section">
     <h3>Useful Links</h3>
@@ -758,6 +817,7 @@
     <script src="learning.js"></script>
     <script src="chatbot.js"></script>
     <script src="robot.js"></script>
+    <script src="automation.js"></script>
 
 
 </body>
