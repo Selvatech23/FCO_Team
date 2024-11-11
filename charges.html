@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charges Applicability Calculator</title>
+</head>
+<body>
+
+<h1>Charges Applicability Calculator</h1>
+
+<form id="charges-form">
+    <label for="limit">Limit:</label><br>
+    <input type="number" id="limit" value="20"><br><br>
+
+    <label for="transaction-date">Transaction Date:</label><br>
+    <input type="date" id="transaction-date" value="2025-01-13"><br><br>
+
+    <label for="transaction-amounts">Transaction Amounts (comma separated):</label><br>
+    <input type="text" id="transaction-amounts" value="53, 100, 200"><br><br>
+
+    <label for="unpaid-transactions">Unpaid Transactions (comma separated, Date Amount):</label><br>
+    <input type="text" id="unpaid-transactions" value="04NOV24 35.71, 06DEC24 100"><br><br>
+
+    <label for="unpaid-previous-date-amount">Unpaid Previous Date Amount:</label><br>
+    <input type="number" id="unpaid-previous-date-amount" value="0.00"><br><br>
+
+    <button type="submit">Check Charges Applicability</button>
+</form>
+
+<h3>Output:</h3>
+<div id="output"></div>
+
+<script>
+    document.getElementById('charges-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const limit = parseFloat(document.getElementById('limit').value);
+        const transactionDate = document.getElementById('transaction-date').value;
+        const transactionAmounts = document.getElementById('transaction-amounts').value.split(',').map(amount => parseFloat(amount.trim()));
+        const unpaidTransactions = document.getElementById('unpaid-transactions').value.split(',').map(transaction => {
+            const [date, amount] = transaction.trim().split(' ');
+            return { date, amount: parseFloat(amount.trim()) };
+        });
+        const unpaidPreviousDateAmount = parseFloat(document.getElementById('unpaid-previous-date-amount').value);
+
+        const transactionDateObj = new Date(transactionDate);
+        const outputDiv = document.getElementById('output');
+
+        let outputHtml = '';
+
+        unpaidTransactions.forEach((unpaid, index) => {
+            const unpaidDateObj = new Date(unpaid.date.slice(0, 2) + '-' + unpaid.date.slice(2, 5) + '-' + unpaid.date.slice(5)); // Format Unpaid Date
+            
+            let effectiveTransactionAmount = 0;
+            
+            // If Transaction Date > Unpaid Date, set Transaction Amount to 0
+            if (transactionDateObj > unpaidDateObj) {
+                effectiveTransactionAmount = 0;
+            } else {
+                // Otherwise, use the actual Transaction Amount
+                effectiveTransactionAmount = transactionAmounts[index] || 0; // Default to 0 if no matching transaction amount for the index
+            }
+
+            // Apply Steps to check Charges Applicability for each unpaid transaction
+            let result = 'No';
+
+            if (unpaidPreviousDateAmount >= unpaid.amount) {
+                result = 'No';
+            } else if (unpaidPreviousDateAmount + limit >= unpaid.amount) {
+                result = 'No';
+            } else if (unpaidPreviousDateAmount + limit + effectiveTransactionAmount >= unpaid.amount) {
+                result = 'Yes';
+            }
+
+            outputHtml += `<p>Unpaid Transaction ${index + 1}: Date: ${unpaid.date}, Amount: ${unpaid.amount}, Applicability: ${result}</p>`;
+        });
+
+        outputDiv.innerHTML = outputHtml;
+    });
+</script>
+
+</body>
+</html>

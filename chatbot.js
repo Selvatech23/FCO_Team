@@ -1,5 +1,8 @@
+
+
+/*
 // Display user and bot messages in the chatbot window
-function sendMessage() {
+ function sendMessage() {
     const userInput = document.getElementById('user-input').value;
     if (userInput.trim() !== "") {
         displayMessage(userInput, "user");
@@ -66,22 +69,7 @@ const responses = {
     "team leader":"Rega Ramachandran",
     "tl":"Rega Ramachandran",
     "inc": "INC stands for Interest and charges.",
-    "controliq": "Here’s the <a href='https://natwest.workwareplus.com/' target='_blank'>ControlIQ portal</a>. Please make sure to log in. The link will open in a new tab.",
-    "adp": "Access the <a href='https://www.vista.adp.com/vista/index.html?TYPE=33554433&REALMOID=06-00056349-5d04-1f8a-bae3-1b780aca0000&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=-SM-2PZcgxfasaByM85o0PQjgCdeNLFKO0bt1Cvh2QNqwbwSryAKScVMsAtmoh9wl%2Fbh&TARGET=-SM-https:%2F%2Fwww.vista.adp.com%2FESS4%2FESSV5%2Flogin' target='_blank'>ADP portal</a>.",
-    "routematic": "You can access <a href='https://rbs.routematic.com/Security/Home' target='_blank'>Routematic</a> here.",
-    "condeco": "Visit <a href='https://rbs.condecosoftware.com/master.aspx' target='_blank'>Condeco</a> to manage bookings.",
-    "book seat":"Visit <a href='https://rbs.condecosoftware.com/master.aspx' target='_blank'>Condeco</a> to manage bookings.",
-    "workday": "Access <a href='https://wd3.myworkday.com/rbs/d/pex/home.htmld' target='_blank'>Workday</a> here.",
-    "drs": "Log in to <a href='https://fsso.fm.rbsgrp.net/idp/startSSO.ping?PartnerSpId=NATWEST_PF_External_EMEA_Prod' target='_blank'>DRS</a>.",
-    "password_reset": "Reset your password at <a href='https://slx.web.rbsgrp.net/Content/Passwords/Forms/Form_RACF_Reset.aspx' target='_blank'>Back Office Password Reset</a>.",
-    "gpl": "Access <a href='https://wd3.myworkday.com/rbs/learning' target='_blank'>GPL</a> for learning resources.",
-    "tableau": "Visit <a href='https://tableau.datrep-prod.shared.banksvcs.net/#/site/FSA/views/FiservICReport/ICReport?:iid=1' target='_blank'>Tableau</a> for reporting.",
-    "mastercard": "Log in to <a href='https://www.mastercardconnect.com/-/sign-in?URL=%2F-%2Fstore-plus' target='_blank'>Mastercard Connect</a>.",
-    "ask_archie": "Ask questions via <a href='https://askarchie.natwestgroup-chatbot-gateway.com/' target='_blank'>Ask Archie</a>.",
-    "absence": "Record absence at <a href='https://wd3.myworkday.com/rbs/d/inst/13102!CK5mGhEKBggDEMenAhIHCgUI1A0QCxq-AQoGCAMQgawCErQBEjoI22gaCgoGCAMQp7EBEgAaEQoGCAMQ-qsCEgcKBQjjGRAvGgoKBggDEP_rAhIAGgoKBggDEICsAhIAEjoI22gaCgoGCAMQp7EBEgAaEQoGCAMQ-qsCEgcKBQjjGRASGgoKBggDEP_rAhIAGgoKBggDEICsAhIA*H4F-tGNZsg4~/cacheable-task/2997$2151.htmld#backheader=true' target='_blank'>Absence portal</a>.",
-    "tsys": "Access <a href='https://tcs.tsyseurope.com/prweb/PRWebLDAP1/WgVvXYNg-ZXRKjwI4ND_kasIU5DIFkWrv27UEwJodZI%28*/!STANDARD' target='_blank'>TSYS</a> for transaction management.",
-    "rtm": "You can access the <a href='https://natwest.workwareplus.com/' target='_blank'>RTM portal</a> here. It will open in a new tab, and you'll need your login credentials.",
-    "controliq": "Here’s the <a href='https://natwest.workwareplus.com/' target='_blank'>ControlIQ portal</a>. Please make sure to log in.",
+   
     // Greeting responses
     "hi": "Hello! How can I assist you today?",
     "hello": "Hi there! How can I help you?",
@@ -169,7 +157,7 @@ function getBotResponse(input) {
         }
     }
 
-    return highestScore > 0.5 ? responses[bestMatch] : "I'm not sure how to answer that. Could you ask in a different way?  My friend, <a href='https://askarchie.natwestgroup-chatbot-gateway.com/' target='_blank'>Ask Archie</a>. can help you ";
+    return highestScore > 0.5 ? responses[bestMatch] : "I'm not sure how to answer that. Could you ask in a different way?  My friend,  can help you ";
 }
 
 // Toggle chatbot display
@@ -209,3 +197,4 @@ function displayMessage(message, sender) {
 }
 
 
+*/

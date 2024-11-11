@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charges Applicability</title>
+</head>
+<body>
+    <h1>Charges Applicability Calculator</h1>
+
+    <!-- User Inputs -->
+    <label for="limit">Limit:</label>
+    <input type="number" id="limit" placeholder="Enter Limit"><br><br>
+
+    <label for="transaction-date">Transaction Date:</label>
+    <input type="text" id="transaction-date" placeholder="DD-MM-YYYY"><br><br>
+
+    <label for="transaction-amount">Transaction Amount:</label>
+    <input type="number" id="transaction-amount" placeholder="Enter Transaction Amount"><br><br>
+
+    <label for="unpaid-transaction">Unpaid Transaction:</label>
+    <input type="text" id="unpaid-transaction" placeholder="Enter Unpaid Transaction"><br><br>
+
+    <label for="unpaid-previous-amount">Unpaid Previous Date Amount:</label>
+    <input type="number" id="unpaid-previous-amount" placeholder="Enter Unpaid Previous Amount"><br><br>
+
+    <button onclick="checkChargesApplicability()">Check Charges Applicability</button>
+
+    <h2>Output:</h2>
+    <p id="output"></p>
+
+    <script>
+        function checkChargesApplicability() {
+            // Get user inputs
+            const limit = parseFloat(document.getElementById('limit').value);
+            const transactionDate = document.getElementById('transaction-date').value;
+            const transactionAmount = parseFloat(document.getElementById('transaction-amount').value);
+            const unpaidTransaction = document.getElementById('unpaid-transaction').value;
+            const unpaidPreviousAmount = parseFloat(document.getElementById('unpaid-previous-amount').value);
+
+            // Extract Unpaid Transaction Date and Amount from input
+            const unpaidData = unpaidTransaction.split(' '); // Assuming format "DDMMMYY D/D <Merchant> * <Amount>"
+            const unpaidDate = unpaidData[0]; // Extracts the date (e.g., "04NOV24")
+            const unpaidAmount = parseFloat(unpaidData[unpaidData.length - 1]); // Extracts the amount (e.g., 35.71)
+
+            // Convert the dates to Date objects for comparison
+            const transactionDateParts = transactionDate.split('-');
+            const transactionDateObj = new Date(`${transactionDateParts[2]}-${transactionDateParts[1]}-${transactionDateParts[0]}`); // Format "DD-MM-YYYY" to Date object
+
+            // Convert Unpaid Date "DDMMMYY" to "DD-MM-YYYY" for correct Date object conversion
+            const unpaidDateStr = unpaidDate.substring(0, 2) + '-' + 
+                                  (getMonthNumber(unpaidDate.substring(2, 5))) + '-' + 
+                                  '20' + unpaidDate.substring(5, 7); // Convert "04NOV24" to "04-11-2024"
+            const unpaidDateObj = new Date(unpaidDateStr); // Format "04-11-2024" to Date object
+
+            // Step 1: Check if Unpaid Previous Date Amount ≥ Unpaid Amount
+            if (unpaidPreviousAmount >= unpaidAmount) {
+                document.getElementById('output').textContent = 'No'; // Output No if condition is true
+                return;
+            }
+
+            // Step 2: Check if Unpaid Previous Amount + Limit ≥ Unpaid Amount
+            if (unpaidPreviousAmount + limit >= unpaidAmount) {
+                document.getElementById('output').textContent = 'No'; // Output No if condition is true
+                return;
+            }
+
+            // Step 3: Check if Transaction Date is greater than Unpaid Date
+            let effectiveTransactionAmount = transactionAmount;
+            if (transactionDateObj > unpaidDateObj) {
+                effectiveTransactionAmount = 0; // If Transaction Date is greater, consider Transaction Amount as 0
+            }
+
+            // Step 4: Check if Unpaid Previous Amount + Limit + Effective Transaction Amount ≥ Unpaid Amount
+            if (unpaidPreviousAmount + limit + effectiveTransactionAmount >= unpaidAmount) {
+                document.getElementById('output').textContent = 'Yes'; // Output Yes if condition is true
+            } else {
+                document.getElementById('output').textContent = 'No'; // Output No if condition is false
+            }
+        }
+
+        // Helper function to get month number from the month abbreviation (e.g., 'NOV' -> 11)
+        function getMonthNumber(monthAbbreviation) {
+            const months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
+            return months.indexOf(monthAbbreviation) + 1;
+        }
+    </script>
+</body>
+</html>
