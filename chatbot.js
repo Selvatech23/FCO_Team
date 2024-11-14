@@ -1,6 +1,6 @@
 
 
-/*
+
 // Display user and bot messages in the chatbot window
  function sendMessage() {
     const userInput = document.getElementById('user-input').value;
@@ -126,6 +126,13 @@ const responses = {
 "talk to you later": "Alright, talk to you soon!",
 
 
+// others
+"reason for manager leaving": "Sorry. May be he is got new offer",
+"manager leaving ": "Sorry. May be he is got new offer",
+"reason  manager leaving ": "Sorry. May be he is got new offer",
+"reason for saravanan leaving": "Sorry. May be he  got new offer"
+
+
 
 
 };
@@ -197,4 +204,28 @@ function displayMessage(message, sender) {
 }
 
 
-*/
+
+// Get bot response with priority for exact phrase matching
+function getBotResponse(input) {
+    input = input.toLowerCase().trim();
+
+    // First, check for an exact match in the responses object
+    if (responses[input]) {
+        return responses[input];
+    }
+
+    // If no exact match, proceed with similarity-based matching
+    let bestMatch = "";
+    let highestScore = 0;
+
+    for (let key in responses) {
+        const score = calculateSimilarity(input, key);
+        if (score > highestScore) {
+            highestScore = score;
+            bestMatch = key;
+        }
+    }
+
+    return highestScore > 0.5 ? responses[bestMatch] : "I'm not sure how to answer that. Could you ask in a different way? My friend can help you.";
+}
+

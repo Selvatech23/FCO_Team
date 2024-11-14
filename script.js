@@ -3,9 +3,8 @@ const teamUpdates = [
     "Update MI Counts on Daily Basis",
     "Huddle meeting by 3.00 pm IST",
     "Ensure to Complete 8 days/40% of RTO ",
-    "Oct 24 is Diwali Celebration,Request everyone to come in traditional wears.",
     "Overview Results got published.",
-    "Victoria vist to Chennai by Nov24"
+    "Complete GPL asap "
 ];
 
 let currentUpdateIndex = 0;
